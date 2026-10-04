@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/infection/infection/0.32.6/resources/schema.json",
+    "source": {
+        "directories": ["src"]
+    },
+    "phpUnit": {
+        "customPath": "tools/phpunit.phar"
+    },
+    "tmpDir": ".infection/tmp",
+    "logs": {
+        "text": ".infection/infection.log",
+        "html": ".infection/infection.html"
+    },
+    "mutators": {
+        "@default": true
+    }
+}

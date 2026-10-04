@@ -1,0 +1,31 @@
+{
+    "name": "stravid/generate-html-in-php",
+    "description": "Generate HTML in PHP",
+    "type": "library",
+    "license": "MPL-2.0",
+    "keywords": ["html", "components", "templating"],
+    "authors": [
+        {
+            "name": "David Strauß",
+            "email": "david@strauss.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "files": ["src/html.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stravid\\Html\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "@php tools/phpunit.phar",
+        "mutation": [
+            "@putenv XDEBUG_MODE=coverage",
+            "@php tools/infection.phar --threads=max"
+        ]
+    }
+}
